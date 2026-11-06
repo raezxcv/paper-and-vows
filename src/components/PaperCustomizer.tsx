@@ -29,8 +29,8 @@ export const PaperCustomizer: React.FC<PaperCustomizerProps> = ({
   const [selectedSeal, setSelectedSeal] = useState<WaxSealOption>(WAX_SEALS[0]);
   const [quantity, setQuantity] = useState<number>(100);
   const [coupleNames, setCoupleNames] = useState<string>('Eleanor & Julian');
-  const [eventDate, setEventDate] = useState<string>('Saturday, the Twelfth of September');
-  const [eventVenue, setEventVenue] = useState<string>('Villa Cetinale · Tuscany, Italy');
+  const eventDate = 'Saturday, the Twelfth of September';
+  const eventVenue = 'Villa Cetinale · Tuscany, Italy';
 
   // Compute initials for the wax seal / crest
   const computeInitials = (nameStr: string) => {
