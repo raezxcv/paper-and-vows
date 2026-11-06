@@ -1,0 +1,104 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Cormorant Garamond", Georgia, serif;
+  --font-display: "Playfair Display", Georgia, serif;
+  --font-sans: "Plus Jakarta Sans", system-ui, sans-serif;
+  --font-script: "Alex Brush", cursive;
+
+  --color-ivory: #FBF9F5;
+  --color-alabaster: #F3EFEA;
+  --color-champagne: #E5DDD0;
+  --color-taupe: #5C554F;
+  --color-umber: #2C2623;
+  --color-burgundy: #4A1521;
+  --color-burgundy-light: #6A2232;
+  --color-gold: #8C7355;
+  --color-gold-light: #B89F7C;
+  --color-sage: #60695C;
+}
+
+:root {
+  color-scheme: light;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: #FBF9F5;
+  color: #2C2623;
+  overflow-x: hidden;
+}
+
+/* Luxury Paper & Letterpress Effects */
+.font-serif {
+  font-family: var(--font-serif);
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+.font-script {
+  font-family: var(--font-script);
+}
+
+.paper-grain {
+  background-color: #FBF9F5;
+  background-image: radial-gradient(rgba(44, 38, 35, 0.04) 1px, transparent 0);
+  background-size: 24px 24px;
+}
+
+.letterpress-deboss {
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8), 0 -1px 0 rgba(44, 38, 35, 0.15);
+}
+
+.foil-shimmer {
+  background: linear-gradient(135deg, #8C7355 0%, #E5DDD0 50%, #8C7355 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gold-foil-surface {
+  background: linear-gradient(135deg, #a88d65 0%, #e6dac6 40%, #c4a97f 70%, #91754f 100%);
+}
+
+/* Restrained, Quiet Motion Layer */
+@keyframes studioFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: studioFadeIn 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Custom quiet scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #F3EFEA;
+}
+::-webkit-scrollbar-thumb {
+  background: #A89F91;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #8C7355;
+}
